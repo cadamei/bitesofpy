@@ -26,7 +26,7 @@ def welcome(user):
     return f'welcome back {user}'
 
 
-
-print(welcome('anonymous'))
-print(welcome('julian'))
-print(welcome('sue'))
+if __name__ == '__main__':
+    print(welcome('anonymous'))
+    print(welcome('julian'))
+    print(welcome('sue'))
