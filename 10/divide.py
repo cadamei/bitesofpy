@@ -6,12 +6,10 @@ def positive_divide(numerator, denominator):
         print("You can't divide buy zero")
     except TypeError:
         print("You must input a number")
-    elif numerator or denominator is None:
+    else:
+        if result < 0:
             raise ValueError
-    elif result < 0:
-            raise ValueError
-    finally:
-        return result
+    return result
 
 
 if __name__ == '__main__':
