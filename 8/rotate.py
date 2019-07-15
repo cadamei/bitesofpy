@@ -6,13 +6,14 @@ def rotate(string, n):
        Expects string and n (int) for number of characters to move.
     """
     string1 = deque(string)
-
-    for i in range(0, n):
-        if i < n:
+    if n < 0:
+        for i in range(n, 0):
+            result = string1.pop()
+            string1.appendleft(result)
+    else:
+        for i in range(0, n):
             result = string1.popleft()
             string1.append(result)
-        else:
-            break
 
     return ''.join(string1)
 
