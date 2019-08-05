@@ -14,8 +14,10 @@ LETTER_SCORES = {letter: score for score, letters in scrabble_scores
 
 def load_words():
     """load the words dictionary (DICTIONARY constant) into a list and return it"""
-    with open(DICTIONARY, "w") as f:
+    with open(DICTIONARY, "r") as f:
         dictionary = [word for word in f]
+
+    return dictionary
 
 
 def calc_word_value(word):
@@ -26,3 +28,7 @@ def calc_word_value(word):
 def max_word_value(words=None):
     """given a list of words return the word with the maximum word value"""
     pass
+
+
+if __name__ == '__main__':
+    print(load_words())
